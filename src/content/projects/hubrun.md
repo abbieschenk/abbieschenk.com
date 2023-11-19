@@ -1,11 +1,10 @@
 ---
-title: "HUB Run"
+title: 'HUB Run'
 date: 2015-09-01T08:30:00-07:00
-description: "A web game based on a University of Alberta locale for the student newspaper."
-socialcloudinaryimg: "projects/hub-run/hubrun_vyv8yx.jpg"
-tags: ["dev", "web", "gaming"]
-draft: false
+description: 'A web game based on a University of Alberta locale for the student newspaper.'
+socialcloudinaryimg: 'projects/hub-run/hubrun_vyv8yx.jpg'
 ---
+
 HUB Run is a web game created for The Gateway student newspaper. You can play it on [The Gateway's website](https://thegatewayonline.ca/hubrun) and find it on [GitHub](https://github.com/TheGateway/HUB-Run).
 
 {{< cloudinary src="projects/hub-run/hubrun_vyv8yx.jpg" alt="Title screen for the game HUB Run, showing the title, the controls, a top-down view of the main character in a hallway, and an 8-bit style logo for The Gateway student newspaper." caption="A screenshot of the starting screen for HUB Run." >}}

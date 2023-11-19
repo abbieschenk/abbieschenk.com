@@ -15,6 +15,7 @@
         "@astrojs/mdx": "^1.1.5",
         "@astrojs/rss": "^3.0.0",
         "@astrojs/tailwind": "^5.0.2",
+        "@cloudinary/url-gen": "^1.13.0",
         "astro": "^3.5.5",
         "tailwindcss": "^3.0.24",
         "typescript": "^5.2.2"

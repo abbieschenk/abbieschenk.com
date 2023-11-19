@@ -1,0 +1,30 @@
+---
+import { Cloudinary } from '@cloudinary/url-gen';
+import config from '../config';
+
+interface Props {
+    src: string;
+    alt: string;
+    width?: string;
+    height?: string;
+    lazy?: boolean;
+}
+
+const { lazy = true, src, ...rest } = Astro.props;
+
+const cloudinary = new Cloudinary({
+    cloud: {
+        cloudName: config.cloudinary.cloudName,
+    },
+});
+
+const cloudinaryImage = cloudinary.image(src);
+
+if (src.startsWith('https://')) {
+    cloudinaryImage.setDeliveryType('fetch');
+}
+
+const cloudinarySrc = cloudinaryImage.toURL();
+---
+
+<img loading={lazy ? 'lazy' : 'eager'} src={cloudinarySrc} {...rest} />

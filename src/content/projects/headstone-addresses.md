@@ -1,13 +1,11 @@
 ---
-title: "Headstone Addresses"
-description: "An Edmonton Heritage Council grant-funded, spatiotemporal data visualization of cemetary headstones linked to their home addresses in China."
+title: 'Headstone Addresses'
+description: 'An Edmonton Heritage Council grant-funded, spatiotemporal data visualization of cemetary headstones linked to their home addresses in China.'
 date: 2021-07-04T09:30:00-06:00
-tags: ["heritage", "grant", "dataviz", "dev", "react", "gatsby", ]
-socialcloudinaryimg: "projects/headstone-addresses/headstone-addresses-headstone-source_ixvbmr.png"
-draft: false
+socialcloudinaryimg: 'projects/headstone-addresses/headstone-addresses-headstone-source_ixvbmr.png'
 ---
-[Headstone Addresses](https://headstoneaddresses.com/) is a spatiotemporal data visualization of cemetary headstones linked to their home addresses in China. It is a community project from the 2020 Digital Heritage Experiences grants stream. The project was supported by the Edmonton Heritage Council and the City of Edmonton.
 
+[Headstone Addresses](https://headstoneaddresses.com/) is a spatiotemporal data visualization of cemetary headstones linked to their home addresses in China. It is a community project from the 2020 Digital Heritage Experiences grants stream. The project was supported by the Edmonton Heritage Council and the City of Edmonton.
 
 My involvement with the project included assisting with gathering data in three Edmonton cemetaries with project lead (and my spouse) Elaine Yip, and then creating a data visualization that linked the gathered headstone data to birth date, burial date, and home address location.
 

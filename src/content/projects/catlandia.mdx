@@ -2,12 +2,11 @@
 title: 'Catlandia'
 description: 'A cat-based Unity3D role playing game released for PC, macOS, Android, and iOS.'
 date: 2018-05-01T09:30:00-06:00
-tags: ['dev', 'unity3D', 'gaming']
 socialcloudinaryimg: 'projects/catlandia/convogame_ez0fvy.png'
-draft: false
 ---
 
 import YouTube from '../../components/YouTube.astro';
+import CloudinaryImage from '../../components/CloudinaryImage.astro';
 
 I assisted with initial development of Catlandia, a cat-based Unity3D role playing game. Although I left the team in 2018 to focus on my MA thesis, the game was later released on PC and macOS through Steam, and the Android and iOS app stores.
 
@@ -21,7 +20,10 @@ My main role was getting initial development set up. As a story-based RPG, conve
 
 Using my experience from working on [ScriptEase II](/projects/scriptease-ii), I built a game-agnostic, web-based conversation editor called ConvoGame. ConvoGame allowed for the creation of branching conversations, and then exported everything as .json files. I wrote Unity3D scripts to read these into an initial version of Catlandia.
 
-{/* {/_ {{< cloudinary src="projects/catlandia/convogame_ez0fvy.png" alt="A screenshot of the ConvoGame game conversation editor, showing the conversation tree and editor panel filled with some basic text from the Catlandia game." >}} _/} */}
+<CloudinaryImage
+    src="projects/catlandia/convogame_ez0fvy"
+    alt="A screenshot of the ConvoGame game conversation editor, showing the conversation tree and editor panel filled with some basic text from the Catlandia game."
+/>
 
 You can try out ConvoGame [here](/convogame) and find it on [GitHub](https://github.com/abbieschenk/convogame). Please note that it was primarily intended as an internal development tool. Although I planned to develop it further, it remains in that state along with all of the minor bugs that came with it.
 
