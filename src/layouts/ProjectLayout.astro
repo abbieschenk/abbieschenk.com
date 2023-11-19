@@ -1,0 +1,19 @@
+---
+import type { ProjectFrontmatter } from '../types';
+import Layout from './Layout.astro';
+
+interface Props {
+    frontmatter: ProjectFrontmatter;
+}
+
+const {
+    frontmatter: { title },
+} = Astro.props;
+---
+
+<Layout {title}>
+    <h1 class="text-xl">{title}</h1>
+    <div class="prose">
+        <slot />
+    </div>
+</Layout>
