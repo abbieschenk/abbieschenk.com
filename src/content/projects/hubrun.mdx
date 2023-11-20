@@ -5,9 +5,15 @@ description: 'A web game based on a University of Alberta locale for the student
 socialcloudinaryimg: 'projects/hub-run/hubrun_vyv8yx.jpg'
 ---
 
+import CloudinaryImage from '@/components/CloudinaryImage.astro';
+
 HUB Run is a web game created for The Gateway student newspaper. You can play it on [The Gateway's website](https://thegatewayonline.ca/hubrun) and find it on [GitHub](https://github.com/TheGateway/HUB-Run).
 
-{{< cloudinary src="projects/hub-run/hubrun_vyv8yx.jpg" alt="Title screen for the game HUB Run, showing the title, the controls, a top-down view of the main character in a hallway, and an 8-bit style logo for The Gateway student newspaper." caption="A screenshot of the starting screen for HUB Run." >}}
+<CloudinaryImage
+    src="projects/hub-run/hubrun_vyv8yx.jpg"
+    alt="Title screen for the game HUB Run, showing the title, the controls, a top-down view of the main character in a hallway, and an 8-bit style logo for The Gateway student newspaper."
+    caption="A screenshot of the starting screen for HUB Run."
+/>
 
 The game was built using the [Phaser](https://phaser.io) Javascript framework, with art by [Jess Hong](http://www.jesshong.com). It's an endless runner based on a long building at the University of Alberta called HUB. The idea came from a common complaint from students about people walking down the wrong side while trying to get to class.
 

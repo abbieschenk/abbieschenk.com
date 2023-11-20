@@ -5,13 +5,19 @@ socialcloudinaryimg: 'projects/scriptease-ii/seii_vcezit.png'
 date: 2014-09-01T09:30:00-06:00
 ---
 
+import CloudinaryImage from '@/components/CloudinaryImage.astro';
+
 ScriptEase II (SEII) is a program that allows video game designers to add scripts and conversations to their games without knowing how to code by using a graphical user interface. It can work with any game engine using a "translator."
 
 Find it on [GitHub](https://github.com/UA-ScriptEase/scriptease).
 
 SEII was created by BELIEVE at the University of Alberta, a research group created to study believability in video games. The original ScriptEase only worked with the Neverwinter Nights Aurora toolkit, which was used to teach the CMPUT 250: Computers and Games course.
 
-{{< cloudinary src="projects/scriptease-ii/seii_vcezit.png" alt="A screenshot of the ScriptEase II visual code editor in four main panels, with scripting functions on the left and bottom right, and the story graph shown on the top right." caption="A screenshot of the ScriptEase II with scripting functions and the story graph.">}}
+<CloudinaryImage
+    src="projects/scriptease-ii/seii_vcezit.png"
+    alt="A screenshot of the ScriptEase II visual code editor in four main panels, with scripting functions on the left and bottom right, and the story graph shown on the top right."
+    caption="A screenshot of the ScriptEase II with scripting functions and the story graph."
+/>
 
 I wrote the first Unity3D translator. SEII was always designed with interoperability in mind, but it wasn't actually tested. The Unity3D translator worked as a proof of concept, and was used with other BELIEVE projects.
 

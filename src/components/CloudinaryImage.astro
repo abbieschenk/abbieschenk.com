@@ -6,12 +6,13 @@ import config from '@/config';
 interface Props {
     src: string;
     alt: string;
+    caption?: string;
     width?: string;
     height?: string;
     lazy?: boolean;
 }
 
-const { lazy = true, src, ...rest } = Astro.props;
+const { lazy = true, src, caption, ...rest } = Astro.props;
 
 const cloudinary = new Cloudinary({
     cloud: {
@@ -28,4 +29,7 @@ if (src.startsWith('https://')) {
 const cloudinarySrc = cloudinaryImage.toURL();
 ---
 
-<img loading={lazy ? 'lazy' : 'eager'} src={cloudinarySrc} {...rest} />
+<figure>
+    <img loading={lazy ? 'lazy' : 'eager'} src={cloudinarySrc} {...rest} />
+    {caption ?? <figcaption>{caption}</figcaption>}
+</figure>
