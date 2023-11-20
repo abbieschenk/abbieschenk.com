@@ -5,7 +5,8 @@ date: 2021-06-10T09:30:00-06:00
 socialcloudinaryimg: 'projects/ludo-systems/dialogue_iodzkr.png'
 ---
 
-import YouTube from '../../components/YouTube.astro';
+import YouTube from '@/components/YouTube.astro';
+import CloudinaryImage from '@/components/CloudinaryImage.astro';
 
 [Ludo.Systems](https://ludo.systems) is a set of visual game development tools designed for non-programmmers, exportable in common formats that are easy for programmers to add to almost any game engine. It is currently in an experimental release to try out as I continue work on it.
 
@@ -17,7 +18,11 @@ The first and currently available tool is called Nodes. You can use it to set up
 
 The intent would be for a non-programmer to use this tool to create copy for branching parts of the game in it, and then the programmer to implement systems that can work with these .json files. This means the non-programmer doesn't need to open the game engine to write conversations, or plan a complex quest system. The attributes could also be used to call specific hooks in the game engine at certain points of a quest or conversation.
 
-{/* {{< cloudinary src="projects/ludo-systems/dialogue_iodzkr.png" alt="An example of a branching dialogue system created in Ludo.Systems Nodes." caption="An example of a branching dialogue system created in Ludo.Systems Nodes." >}} */}
+<CloudinaryImage
+    src="projects/ludo-systems/dialogue_iodzkr"
+    alt="An example of a branching dialogue system created in Ludo.Systems Nodes."
+    caption="An example of a branching dialogue system created in Ludo.Systems Nodes."
+/>
 
 Ludo.Systems draws from [my first programming experience working on ScriptEase II](https://abbieschenk.com/projects/scriptease-ii) at the University of Alberta, a visual game development program that worked with different translators to integrate with game engines. I worked a lot on a node-based system that was used to create and edit conversations and quests (sound familiar?). ScriptEase II is now open source, and at this point likely out of date.
 
