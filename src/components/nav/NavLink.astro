@@ -5,6 +5,8 @@ interface Props {
 }
 
 const { href, text } = Astro.props;
+
+const hrefVariants = [href, href.endsWith('/') ? href.slice(0, href.length - 1) : `${href}/`];
 ---
 
 <a
@@ -13,6 +15,6 @@ const { href, text } = Astro.props;
         'text-white',
         'hover:text-accent-400',
         'decoration-solid',
-        Astro.url.pathname === href ? 'underline' : 'no-underline',
+        hrefVariants.includes(Astro.url.pathname) ? 'underline' : 'no-underline',
     ]}>{text}</a
 >
