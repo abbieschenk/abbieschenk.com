@@ -1,27 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
-
-import ProjectCard from '@/components/ProjectCard.astro';
+import Markdown from '@/components/Markdown.astro';
+import { Content } from '@/content/root/index.mdx';
 import Layout from '@/layouts/Layout.astro';
-
-const title = 'Abbie Schenk';
-
-const projects = await getCollection('projects', ({ data: { draft } }) => !draft);
 ---
 
-<Layout title={title}>
+<Layout>
     <main>
-        <h1 class="text-lg">{title}</h1>
-        <ul>
-            {
-                projects
-                    .sort(({ data: { date: a } }, { data: { date: b } }) => b.getTime() - a.getTime())
-                    .map(({ slug, data: { date, title, description } }) => (
-                        <li>
-                            <ProjectCard href={`/projects/${slug}`} {date} {title} {description} />
-                        </li>
-                    ))
-            }
-        </ul>
+        <Markdown>
+            <Content />
+        </Markdown>
     </main>
 </Layout>

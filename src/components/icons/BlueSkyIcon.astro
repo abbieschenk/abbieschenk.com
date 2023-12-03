@@ -1,0 +1,12 @@
+---
+import Icon from './Icon.astro';
+import type { Props as IconProps } from './Icon.astro';
+
+type Props = IconProps;
+---
+
+<Icon {...Astro.props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -1.5 24 24" width="28" fill="currentColor"
+        ><path d="M4 .565h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4v-12a4 4 0 0 1 4-4z"></path></svg
+    >
+</Icon>

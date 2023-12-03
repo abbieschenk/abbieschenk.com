@@ -9,7 +9,12 @@ interface Props {
 const { href, date, title, description } = Astro.props;
 ---
 
-<a href={href}>
-    <h2>{title}</h2>
-    <p>{description}</p>
-</a>
+<div class="m-2 mb-4 border-t border-accent-400 py-2">
+    <div class="flex">
+        <a class="flex-grow no-underline" href={href}>
+            <h2>{title}</h2>
+        </a>
+        <p>{date.toLocaleDateString('de-CH')}</p>
+    </div>
+    <p>{description} <a {href} class="text-xs">[more]</a></p>
+</div>

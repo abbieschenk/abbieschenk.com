@@ -1,0 +1,20 @@
+---
+import BlueSkyIcon from './BlueSkyIcon.astro';
+import GitHubIcon from './GitHubIcon.astro';
+import InstagramIcon from './InstagramIcon.astro';
+import LinkedInIcon from './LinkedInIcon.astro';
+import MailIcon from './MailIcon.astro';
+import type { Props as IconProps } from './Icon.astro';
+
+type Props = Pick<IconProps, 'black'>;
+
+const { black } = Astro.props;
+---
+
+<div class="flex gap-1">
+    <GitHubIcon href="https://github.com/abbieschenk" {black} />
+    <BlueSkyIcon href="https://bsky.app/profile/abbieschenk.com" {black} />
+    <LinkedInIcon href="https://www.linkedin.com/in/abbie-schenk/" {black} />
+    <InstagramIcon href="https://instagram.com/abbieschenk" {black} />
+    <MailIcon href="mailto:abbieschenk@gmail.com" {black} />
+</div>

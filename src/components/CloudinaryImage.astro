@@ -31,5 +31,11 @@ const cloudinarySrc = cloudinaryImage.toURL();
 
 <figure>
     <img loading={lazy ? 'lazy' : 'eager'} src={cloudinarySrc} {...rest} />
-    {caption ?? <figcaption>{caption}</figcaption>}
+    {
+        caption && (
+            <figcaption class="text-italic mt-0 border-black p-2 px-4 text-center text-xs italic text-black">
+                {caption}
+            </figcaption>
+        )
+    }
 </figure>
