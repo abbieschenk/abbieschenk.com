@@ -1,6 +1,6 @@
 ---
 import { type InferGetStaticPropsType } from 'astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 import ProjectLayout from '@/layouts/ProjectLayout.astro';
 
@@ -8,7 +8,7 @@ export async function getStaticPaths() {
     const projects = await getCollection('projects');
 
     return projects.map((project) => ({
-        params: { slug: project.slug },
+        params: { slug: project.id },
         props: { project },
     }));
 }
@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { project } = Astro.props;
-const { Content } = await project.render();
+const { Content } = await render(project);
 const { data: frontmatter } = project;
 ---
 

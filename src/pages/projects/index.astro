@@ -5,7 +5,7 @@ import Markdown from '@/components/Markdown.astro';
 import ProjectCard from '@/components/ProjectCard.astro';
 import Layout from '@/layouts/Layout.astro';
 
-import { Content } from '@/content/root/projects.mdx';
+import { Content } from '@/data/root/projects.mdx';
 
 const projects = await getCollection('projects', ({ data: { draft } }) => !draft);
 ---
@@ -18,9 +18,9 @@ const projects = await getCollection('projects', ({ data: { draft } }) => !draft
         {
             projects
                 .sort(({ data: { date: a } }, { data: { date: b } }) => b.getTime() - a.getTime())
-                .map(({ slug, data: { date, title, description } }) => (
+                .map(({ id, data: { date, title, description } }) => (
                     <li>
-                        <ProjectCard href={`/projects/${slug}`} {date} {title} {description} />
+                        <ProjectCard href={`/projects/${id}`} {date} {title} {description} />
                     </li>
                 ))
         }
