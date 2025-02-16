@@ -1,0 +1,14 @@
+---
+import type { FontAwesomeIconVariant } from '@/types';
+
+interface Props {
+    class?: string;
+    variant: FontAwesomeIconVariant;
+}
+
+const { class: className, variant } = Astro.props;
+---
+
+<svg class:list={['h-[28px]', 'w-[28px]', className]}>
+    <use href={`/icons/font-awesome.svg#${variant}`}></use>
+</svg>
