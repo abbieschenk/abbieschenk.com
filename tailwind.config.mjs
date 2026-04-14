@@ -33,7 +33,7 @@ export default {
             },
         },
         fontFamily: {
-            sans: 'proxima-nova, Helvetica, Arial, sans-serif',
+            sans: 'Helvetica, Arial, sans-serif',
             serif: 'serif',
         },
     },
